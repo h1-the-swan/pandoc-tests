@@ -1,0 +1,206 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% iConference Article
+% LaTeX Template
+% Version 2.1 (25/10/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Frits Wenneker (http://www.howtotex.com)
+%
+% Modified by:
+% Joseph Helsing (2012)
+% Heinz-Alexander Fütterer, Maxi Kindling, Stephanie van de Sandt (2013)
+% Cory Knobel (2014)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	LIST OF NECESSARY PACKAGES
+%----------------------------------------------------------------------------------------
+
+% The packages used in this template were: fontenc, babel, microtype, indentfirst,
+% geometry, multicol, graphicx, apacite, caption, booktabs, float, footnote, paralist,
+% titlesec, fancyhdr, xcolor, tabularx, lipsum
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+\documentclass[10pt, letterpaper]{article}
+\usepackage{lipsum} % Package to generate dummy text throughout this template
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage{lmodern}
+\usepackage[english]{babel}
+\linespread{1.05} % Line spacing - Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+\setlength{\parindent}{0.5in} % Indent 0,5 inch
+\usepackage[top=.8in, bottom=0.8in, left=1in, right=1in]{geometry} % Document margins
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[implicit=false,colorlinks=true,allcolors={black},urlcolor={black}]{hyperref}
+
+\usepackage{apacite} % Allows for the correct APA citation of references
+\renewcommand{\bibliographytypesize}{\fontsize{10pt}{10pt}} % Set the bibliography font size to 10pt
+
+\usepackage{url}
+\usepackage{tabularx}
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage[sf]{titlesec} % Font of Headings
+
+\usepackage[normal]{caption} % Custom captions under/above floats in tables or figures
+\captionsetup{format=plain,justification=RaggedRight,singlelinecheck=false}
+\usepackage{footnote} %Enables footnotes
+
+\makeatletter
+\def\blfootnote{\selectfont\xdef\@thefnmark{}\@footnotetext}
+\makeatother %This is used to allow for blank footnotes
+
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhf{}
+\fancyhead[L]{\vspace{-15mm}\fontsize{10pt}{10pt}\selectfont{iConference 2016} }%This is the header
+\fancyhead[R]{\vspace{-15mm}\fontsize{10pt}{10pt}\selectfont{[Name of the first author] et. al (if two, write both)} }
+\fancyfoot[C]{\thepage} % Custom footer text
+
+\usepackage{tocloft} % Change List of Figures / Tables
+\renewcommand{\cftfigpresnum}{Figure }
+\setlength{\cftfignumwidth}{5em}
+\renewcommand{\cfttabpresnum}{Table }
+\setlength{\cfttabnumwidth}{5em}
+\renewcommand\cftloftitlefont{\sffamily \Large}
+\renewcommand\cftlottitlefont{\sffamily \Large}
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{$title$}
+%----------------------------------------------------------------------------------------
+
+\date{} % no date
+
+% Formatting title and authors.
+\makeatletter
+\renewcommand{\maketitle}{\bgroup\setlength{\parindent}{0pt}
+\begin{flushleft}
+  {\sffamily \Large {\@title} }
+  \vspace{12pt}\\
+  \@author
+\end{flushleft}\egroup
+}
+\makeatother
+
+%----------------------------------------------------------------------------------------
+% AUTHORS
+%----------------------------------------------------------------------------------------
+
+\author{$for(author)$$author.name$$sep$, $endfor$}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\newenvironment{blockquote}{\list{}{\leftmargin=0.5in\rightmargin=0.0in}\item[]}{\endlist}
+\renewcommand{\listfigurename}{Table of Figures} 
+\renewcommand{\listtablename}{Table of Tables} 
+\maketitle % Insert title
+\thispagestyle{empty} % First page has no header,footer
+
+%----------------------------------------------------------------------------------------
+%	INFOBOX
+%----------------------------------------------------------------------------------------
+
+\begin{center}
+\begin{tabularx}{\textwidth}{|X|}
+\hline
+\vspace{2pt}\\
+\textbf{Abstract}\\
+The abstract shall be no more than 150 words.  All work must be in English.\\
+{\footnotesize \textbf{Keywords:} Enter up to five keywords separated by a semicolon (keyword1; keyword 2; keyword3; keyword4; keyword5)}\\
+{\footnotesize \textbf{Citation:}  Editor will add citation.}\\
+{\footnotesize \textbf{Copyright:} Copyright is held by the authors.}\\
+{\footnotesize \textbf{Acknowledgements:} If there is an acknowledgement add it here. This field is \em{optional}. For review purpose, do not add information to this field until after the paper is accepted.}\\ % Please delete line if not used.
+{\footnotesize \textbf{Research Data:}  If there is any research data / raw data contact the editor. The editor will add research data information such as a DOI. This field is \em{optional}.} \\ % Please delete line if not used.
+{\footnotesize \textbf{Contact:} Author will add e-mail address.}\\ % Please enter at least one contact e-mail address. 
+\vspace{2pt}\\
+\hline
+\end{tabularx}
+\end{center}
+
+%----------------------------------------------------------------------------------------
+%	ARTICLE CONTENTS
+%----------------------------------------------------------------------------------------
+$body$
+%----------------------------------------------------------------------------------------
+%	TABLE EXAMPLE
+%----------------------------------------------------------------------------------------
+\begin{table}[h]
+
+\begin{tabular}{lllll} %This sets the number of columns, one l per column
+\toprule
+Head & Head & Head & Head & Head \\
+\midrule
+Label & 000* & 000 & 000 & 000 \\
+Label & 000 & 000* & 000 & 000 \\
+Label\textsuperscript{a} & 000 & 000 & 000* & 000*\\
+\bottomrule
+\end{tabular}
+\caption{Title of Table} %This sets the table's title
+\end{table}
+%----------------------------------------------------------------------------------------
+%	END TABLE EXAMPLE
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	FIGURE EXAMPLE
+%----------------------------------------------------------------------------------------
+
+%Make sure the figure file that you want to add is in the same folder as this .tex file or it may not show up when compiled.
+
+
+%----------------------------------------------------------------------------------------
+%	END FIGURE EXAMPLE
+%----------------------------------------------------------------------------------------
+
+\section{Heading}
+
+%----------------------------------------------------------------------------------------
+%	LIST EXAMPLE
+%----------------------------------------------------------------------------------------
+
+\begin{itemize}
+\item This
+\item is
+\item a
+\item list.
+\end{itemize}
+
+\begin{enumerate}[a.]
+\item This
+\item is
+\item a
+\item list.
+\end{enumerate}
+
+%----------------------------------------------------------------------------------------
+%	END LIST EXAMPLE
+%----------------------------------------------------------------------------------------
+
+
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+\fontsize{10pt}{10pt}\selectfont
+\urlstyle{same} %Sets the URL fonts to be the same as the current font.
+\bibliographystyle{apacite}
+\bibliography{confbib} % You can use another bibtex file if you desire, or you can just remove the contents of confbib and add in your own entries.
+
+
+\end{document}

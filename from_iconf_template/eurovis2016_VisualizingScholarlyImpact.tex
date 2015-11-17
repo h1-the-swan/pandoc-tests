@@ -1,0 +1,105 @@
+%----------------------------------------------------------------------------------------
+%	LIST OF NECESSARY PACKAGES
+%----------------------------------------------------------------------------------------
+
+% The packages used in this template were: fontenc, babel, microtype, indentfirst,
+% geometry, multicol, graphicx, apacite, caption, booktabs, float, footnote, paralist,
+% titlesec, fancyhdr, xcolor, tabularx, lipsum
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+\documentclass[10pt, letterpaper]{article}
+\usepackage{lipsum} % Package to generate dummy text throughout this template
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage{lmodern}
+\usepackage[english]{babel}
+\linespread{1.05} % Line spacing - Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+\setlength{\parindent}{0.5in} % Indent 0,5 inch
+\usepackage[top=.8in, bottom=0.8in, left=1in, right=1in]{geometry} % Document margins
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[implicit=false,colorlinks=true,allcolors={black},urlcolor={black}]{hyperref}
+
+\usepackage{apacite} % Allows for the correct APA citation of references
+\renewcommand{\bibliographytypesize}{\fontsize{10pt}{10pt}} % Set the bibliography font size to 10pt
+
+\usepackage{url}
+\usepackage{tabularx}
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage[sf]{titlesec} % Font of Headings
+
+\usepackage[normal]{caption} % Custom captions under/above floats in tables or figures
+\captionsetup{format=plain,justification=RaggedRight,singlelinecheck=false}
+\usepackage{footnote} %Enables footnotes
+
+\makeatletter
+\def\blfootnote{\selectfont\xdef\@thefnmark{}\@footnotetext}
+\makeatother %This is used to allow for blank footnotes
+
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhf{}
+\fancyhead[L]{\vspace{-15mm}\fontsize{10pt}{10pt}\selectfont{iConference 2016} }%This is the header
+\fancyhead[R]{\vspace{-15mm}\fontsize{10pt}{10pt}\selectfont{[Name of the first author] et. al (if two, write both)} }
+\fancyfoot[C]{\thepage} % Custom footer text
+
+\usepackage{tocloft} % Change List of Figures / Tables
+\renewcommand{\cftfigpresnum}{Figure }
+\setlength{\cftfignumwidth}{5em}
+\renewcommand{\cfttabpresnum}{Table }
+\setlength{\cfttabnumwidth}{5em}
+\renewcommand\cftloftitlefont{\sffamily \Large}
+\renewcommand\cftlottitlefont{\sffamily \Large}
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{{Title test} % Enter your title here.
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+% AUTHORS
+%----------------------------------------------------------------------------------------
+
+
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\newenvironment{blockquote}{\list{}{\leftmargin=0.5in\rightmargin=0.0in}\item[]}{\endlist}
+\renewcommand{\listfigurename}{Table of Figures} 
+\renewcommand{\listtablename}{Table of Tables} 
+\maketitle % Insert title
+\thispagestyle{empty} % First page has no header,footer
+
+
+%----------------------------------------------------------------------------------------
+%	ARTICLE CONTENTS
+%----------------------------------------------------------------------------------------
+\section{Introduction}\label{introduction}
+
+In thinking about the world of formalized human knowledge, the scholarly
+publication can be thought of as a fundamental unit representing an
+idea. Understanding the state of these publications and the way they fit
+together can provide insight into human knowledge in general. With an
+estimated 7-9 million researchers publishing 2.5 million articles each
+year {[}@ware\_stm\_2015{]}, the need becomes apparent for some sort of
+aggregate analysis to help make sense of it.
+
+Citations between these publications provide context to the
+interrelatedness of the ideas. While not a perfect measure, a
+researcher's decision to cite another publication usually represents a
+judgment about the relevance and quality of the work being cited.
+Conceiving of scientific literature as a \emph{network}, with vertices
+representing publications, journals, researchers, or organizations, and
+edges representing citations between the publications, is one powerful
+way of leveraging this information to learn things about science as a
+whole.
+
+\end{document}

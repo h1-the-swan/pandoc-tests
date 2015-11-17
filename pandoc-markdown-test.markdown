@@ -1,0 +1,3 @@
+"Testing **pandoc** *markdown*"
+
+"That's a quote," is a quote \cite{de_solla_price_editorial_1978}.

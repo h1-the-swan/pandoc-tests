@@ -1,0 +1,44 @@
+Things that seem to work:
+
+put the YAML front matter in at the top like so:
+
+---
+title: Title test
+author:
+- name: Author Name 1
+- name: author Name 2
+...
+
+# Introduction
+
+Body text
+
+-----
+
+In the template use:
+
+\title{$title$}
+
+----
+
+
+\begin{document}
+
+$body$
+
+\end{document}
+
+
+------
+
+This worked too:
+
+\author{$for(author)$$author.name$$sep$, $endfor$}
+
+
+----------
+
+in Vim:
+:!pandoc -o %:r.tex --template=template.tex --latex-engine=pdflatex %
+
+:!pandoc -o %:r.pdf --template=template.tex --latex-engine=pdflatex %
